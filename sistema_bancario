@@ -20,3 +20,4 @@ Para compilar o código, utilize o NASM e o linker do sistema operacional. Execu
 ```bash
 nasm -f elf32 banco.asm -o banco.o
 ld -m elf_i386 banco.o -o sistema_bancario
+./sistema_bancario
