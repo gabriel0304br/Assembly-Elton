@@ -2,3 +2,21 @@
     ├── README.md
     ├── banco.asm
     ├── .gitignore
+
+# Sistema Bancário em Assembly
+
+Este projeto implementa um sistema bancário simples em Assembly, permitindo depósitos, saques e transferências entre uma conta corrente e uma conta poupança.
+
+## Funcionalidades
+
+- Realizar depósitos em contas
+- Realizar saques
+- Transferir valores entre contas
+
+## Como Compilar
+
+Para compilar o código, utilize o NASM e o linker do sistema operacional. Execute os seguintes comandos:
+
+```bash
+nasm -f elf32 banco.asm -o banco.o
+ld -m elf_i386 banco.o -o sistema_bancario
