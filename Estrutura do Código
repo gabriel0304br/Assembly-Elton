@@ -1,0 +1,54 @@
+
+#### 3. Conteúdo do `banco.asm`
+
+Aqui está um exemplo básico do código assembly. Este é um ponto de partida, e você pode expandi-lo conforme necessário.
+
+```assembly
+section .data
+    saldo_corrente dd 0.0
+    saldo_poupanca dd 0.0
+    msg_deposito db 'Digite o valor do deposito: ', 0
+    msg_saque db 'Digite o valor do saque: ', 0
+    msg_transferencia db 'Digite o valor da transferencia: ', 0
+    msg_saldo db 'Saldo Corrente: ', 0
+    msg_saldo_poupanca db 'Saldo Poupanca: ', 0
+
+section .bss
+    valor resd 1
+    escolha resb 1
+
+section .text
+    global _start
+
+_start:
+    ; Exibe o menu de opções
+    call menu
+    jmp _start
+
+menu:
+    ; Exibir opções
+    ; Aqui você pode implementar a lógica do menu e chamar as funções correspondentes
+    ret
+
+depositar:
+    ; Lê o valor do depósito
+    ; Adiciona ao saldo correspondente
+    ret
+
+sacar:
+    ; Lê o valor do saque
+    ; Subtrai do saldo se suficiente
+    ret
+
+transferir:
+    ; Lê o valor e a conta de destino
+    ; Realiza a transferência
+    ret
+
+; Função para imprimir saldo
+imprimir_saldo:
+    ; Imprime saldo da conta corrente e poupança
+    ret
+
+; Código para encerrar o programa
+
