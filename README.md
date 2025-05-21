@@ -1,2 +1,0 @@
-# Assembly-Elton
-Atividade
